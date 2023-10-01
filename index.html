@@ -20,7 +20,14 @@
 
     <main>
         <section class="weather">
-            <section class="current">
+            <aside class="search-area">
+        <!-- search and search history here -->
+            <h2 class="titles" id="search-title">Enter a City:</h2>
+            <input type="text">
+            <button class="search-btn">Search</button>
+        </aside>
+
+        <section class="current">
                 <h2 class="titles city-choice" id="city-choice">England lol</h2>
                 <h3 class="date">DD/MM/YYYY</h3>
                 <icon class="icon"></icon>
@@ -29,18 +36,9 @@
                 <h4 id="humidity">Humidity:</h4>
             </section>
 
-            <section class="five-day-forecast">
-                <h2 class="titles" id="five-day-title">5-Day Forecast:</h2>
-            </section>
+        <section class="five-day-forecast">
+            <h2 class="titles" id="five-day-title">5-Day Forecast:</h2>
         </section>
-
-        <aside class="search-area">
-            <!-- search and search history here -->
-            <h2 class="titles" id="search-title">Enter a City:</h2>
-            <input type="text">
-            <button class="search-btn">Search</button>
-        </aside>
-    
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/js/script.js"></script>
