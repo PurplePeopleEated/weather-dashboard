@@ -15,7 +15,9 @@
     margin: 5rem 5rem;
   }
 
-.current h2 {
+#city-choice {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
     
   }
 
