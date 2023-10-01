@@ -17,6 +17,16 @@
     
   }
 
+.five-day-forecast {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2rem;
+    margin: 5rem 5rem;
+  }
+
 .search-area {
     display: flex;
     border: 2px solid black;
