@@ -6,8 +6,11 @@
     <title>Weather Dashboard</title>
 
     <!-- links here -->
-    <link rel="stylesheet" src="assets/css/reset.css"/>
-    <link rel="stylesheet" src="assets/css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Pixelify+Sans&display=swap"/>
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 
 <body>
@@ -16,16 +19,18 @@
     </header>
 
     <main>
-        <aside class="search-area">
+        <section class="weather">
+            <aside class="search-area">
         <!-- search and search history here -->
             <h2 class="titles" id="search-title">Enter a City:</h2>
             <input type="text">
             <button class="search-btn">Search</button>
-        </aside>
+            </aside>
+        </section>
 
         <section class="current">
-           <h2 class="titles city-choice" id="city-choice">England lol</h2>
-            <h4 class="date">Date:</h3>
+            <h2 class="titles city-choice" id="city-choice">England lol</h2>
+            <h3 class="date">DD/MM/YYYY</h3>
             <icon class="icon"></icon>
             <h4 id="temp">Temp:</h4>
             <h4 id="wind">Wind:</h4>
