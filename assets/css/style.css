@@ -1,14 +1,15 @@
 .header {
-    font-family: 'Pixelify Sans', cursive;
+    font-family: 'Pixelify Sans', sans-serif;
     font-size: 2.5rem;
-    background-color: #523170;
+    color: #625370;
+    background-color: #d4b3f2;
     text-align: center;
   }  
 
 .current {
     display: flex;
-    border: 2px solid black;
     border-radius: 0.5rem;
+    background-color: #d4b3f2;
     flex-direction: column;
     align-items: stretch;
     padding: 2rem;
@@ -23,8 +24,8 @@
 
 .five-day-forecast {
     display: flex;
-    border: 2px solid black;
     border-radius: 0.5rem;
+    background-color: #d4b3f2;
     flex-direction: column;
     align-items: stretch;
     padding: 2rem;
@@ -32,9 +33,9 @@
   }
 
 .search-area {
-    display: flex;
-    border: 2px solid black;
+    display: flex; 
     border-radius: 0.5rem;
+    background-color: #d4b3f2;
     flex-direction: column;
     align-items: stretch;
     padding: 2rem;
