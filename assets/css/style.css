@@ -27,6 +27,20 @@ background-color: #523170;
     justify-content: space-evenly;
   }
 
+
+#date, #temp,
+#wind, #humidity {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7rem;
+    color: #523170;
+    background-color: #48d5bd;
+    border: #523170 0.25rem solid;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+  }
+  
+  
+
 .titles {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 3rem;
