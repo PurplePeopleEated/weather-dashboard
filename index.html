@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
 
     <!-- links here -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Pixelify+Sans&display=swap"/>
-    <link rel="stylesheet" href="assets/css/reset.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Pixelify+Sans&display=swap" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -19,22 +21,20 @@
     </header>
 
     <main>
-        <section class="">
-            <aside class="search-area">
-        <!-- search and search history here -->
-                <h2 class="titles" id="search-title">Enter a City:</h2>
-                <input type="text">
-                <button class="search-btn">Search</button>
-            </aside>
-        </section>
+        <aside class="search-area">
+            <!-- search and search history here -->
+            <h2 class="titles" id="search-title">Enter a City:</h2>
+            <input class="user-input" type="text">
+            <button class="search-btn">Search</button>
+        </aside>
 
         <section class="current-box">
             <h2 class="titles city-choice" id="city-choice">Example City</h2>
             <div class="current-card">
                 <h3 id="date">DD/MM/YYYY</h3>
                 <i id="icon"></i>
-                <h4  id="temp">Temp:</h4>
-                <h4  id="wind">Wind:</h4>
+                <h4 id="temp">Temp:</h4>
+                <h4 id="wind">Wind:</h4>
                 <h4 id="humidity">Humidity:</h4>
             </div>
         </section>
@@ -42,49 +42,50 @@
         <section class="five-day-forecast-box">
             <h2 class="titles" id="five-day-title">5-Day Forecast:</h2>
             <section class="card-box">
-            <div class="card">
-                <h3>DD/MM/YYYY</h3>
-                <i></i>
-                <h4>Temp:</h4>
-                <h4>Wind:</h4>
-                <h4>Humidity:</h4>
-            </div>
+                <div class="card">
+                    <h3>DD/MM/YYYY</h3>
+                    <i></i>
+                    <h4>Temp:</h4>
+                    <h4>Wind:</h4>
+                    <h4>Humidity:</h4>
+                </div>
 
-            <div class="card">
-                <h3>DD/MM/YYYY</h3>
-                <i></i>
-                <h4>Temp:</h4>
-                <h4>Wind:</h4>
-                <h4>Humidity:</h4>
-            </div>
+                <div class="card">
+                    <h3>DD/MM/YYYY</h3>
+                    <i></i>
+                    <h4>Temp:</h4>
+                    <h4>Wind:</h4>
+                    <h4>Humidity:</h4>
+                </div>
 
-            <div class="card">
-                <h3>DD/MM/YYYY</h3>
-                <i></i>
-                <h4>Temp:</h4>
-                <h4>Wind:</h4>
-                <h4>Humidity:</h4>
-            </div>
+                <div class="card">
+                    <h3>DD/MM/YYYY</h3>
+                    <i></i>
+                    <h4>Temp:</h4>
+                    <h4>Wind:</h4>
+                    <h4>Humidity:</h4>
+                </div>
 
-            <div class="card">
-                <h3>DD/MM/YYYY</h3>
-                <i></i>
-                <h4>Temp:</h4>
-                <h4>Wind:</h4>
-                <h4>Humidity:</h4>
-            </div>
+                <div class="card">
+                    <h3>DD/MM/YYYY</h3>
+                    <i></i>
+                    <h4>Temp:</h4>
+                    <h4>Wind:</h4>
+                    <h4>Humidity:</h4>
+                </div>
 
-            <div class="card">
-                <h3>DD/MM/YYYY</h3>
-                <i></i>
-                <h4>Temp:</h4>
-                <h4>Wind:</h4>
-                <h4>Humidity:</h4>
-            </div>
+                <div class="card">
+                    <h3>DD/MM/YYYY</h3>
+                    <i></i>
+                    <h4>Temp:</h4>
+                    <h4>Wind:</h4>
+                    <h4>Humidity:</h4>
+                </div>
             </section>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
