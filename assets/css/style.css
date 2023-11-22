@@ -1,100 +1,107 @@
 html {
-background-color: #523170;
-  }
+  background-color: #523170;
+}
 
 .header-box {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 2.5rem;
-    color: #625370;
-    background-color: #d4b3f2;
-    text-align: center;
-    padding: 1rem;
-  }  
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 2.5rem;
+  color: #625370;
+  background-color: #d4b3f2;
+  text-align: center;
+  padding: 1rem;
+}
 
 .current-box {
-    display: flex;
-    border-radius: 0.5rem;
-    background-color: #d4b3f2;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 2rem;
-    margin: 5rem 5rem;
-  }
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: #d4b3f2;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 2rem;
+  margin: 5rem 5rem;
+}
 
 .current-card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
-
-#date, #temp,
-#wind, #humidity {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.7rem;
-    color: #523170;
-    background-color: #48d5bd;
-    border: #523170 0.25rem solid;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-  }
-  
-  
+#date,
+#temp,
+#wind,
+#humidity {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.7rem;
+  color: #523170;
+  background-color: #48d5bd;
+  border: #523170 0.25rem solid;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
 
 .titles {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 3rem;
-    color: #523170;
-  }
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 3rem;
+  color: #523170;
+}
 
 .five-day-forecast-box {
-    display: flex;
-    border-radius: 0.5rem;
-    background-color: #d4b3f2;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 2rem;
-    margin: 5rem 5rem;
-  }
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: #d4b3f2;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 2rem;
+  margin: 5rem 5rem;
+}
 
 .card {
-    display: flex;
-    border-radius: 0.5rem;
-    background-color: #523170;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.7rem;
-    color: #d4b3f2;
-    width: 15rem;
-    padding: 1rem;
-    margin: 1rem;
-  }
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: #523170;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.7rem;
+  color: #d4b3f2;
+  width: 15rem;
+  padding: 1rem;
+  margin: 1rem;
+}
 
 .card-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
 .search-area {
-    display: flex; 
-    border-radius: 0.5rem;
-    background-color: #d4b3f2;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 2rem;
-    margin: 5rem 5rem;
-  }
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: #d4b3f2;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 2rem;
+  margin: 5rem 5rem;
+}
+
+.search-btn {
+  margin: auto;
+  border-radius: 0.5rem;
+  background-color: #523170;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.7rem;
+  color: #d4b3f2;
+  width: 8rem;
+}
+
+.user-input {
+  margin:auto;
+  margin-bottom: 1rem;
+}
 
 #city-choice {
-    display: flex;
-  }
-
-@media screen and (min-width: 768px) {
-    /* tablet size */
-  }
-
-@media screen and (min-width: 992px) {
-    /* desktop and up */
-  }
+  display: flex;
+}
