@@ -25,7 +25,11 @@ function displayWeather(city) {
   fetch(userReq)
     .then((response) => response.json())
     .then((cityInfo) => {
-      console.log(cityInfo);
+      let lon = cityInfo[0].lon;
+      let lat = cityInfo[0].lat;
+
+      const forecastReq = API_URL + 'forecast?lat=' + lat + '&lon=' + lon + '&appid=' + API_Key;
+      console.log(forecastReq);
     })
 }
 
