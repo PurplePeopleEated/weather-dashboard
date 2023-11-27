@@ -32,8 +32,20 @@ function displayWeather(city) {
       
       fetch(forecastReq)
       .then((response) => response.json())
-      .then((forecastInfo) => {
-        console.log(forecastInfo);
+      .then((info) => {
+        console.log(info);
+
+        let city = document.getElementById('city-choice');
+        let date = document.getElementById('date');
+        let temp = document.getElementById('temp');
+        let wind = document.getElementById('wind');
+        let humidity = document.getElementById('humidity');
+        
+        city.innerHTML = info.city.name;
+        date.innerHTML = new Date(info.list[0].dt * 1000).toLocaleDateString();
+        temp.innerHTML += ' ' + info.list[0].main.temp + '°F';
+        wind.innerHTML += ' ' + info.list[0].wind.speed + 'mph';
+        humidity.innerHTML += ' ' + info.list[0].main.humidity + '%';
       })
     })
 }
