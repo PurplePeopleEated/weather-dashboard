@@ -18,6 +18,11 @@ const API_GEO_URL = 'http://api.openweathermap.org/geo/1.0/direct?q=';
 let cityEl = document.querySelector('.user-input');
 
 // some function to do stuff
+function displayWeather(city) {
+  // Get coords from input
+  const userReq = API_GEO_URL + city + '&limit=1' + '&appid=' + API_Key;
+  console.log(userReq);
+}
 
 // Allow stuff to happen when searchBtn is clicked
 let searchBtn = document.querySelector('.search-btn');
@@ -25,6 +30,6 @@ let searchBtn = document.querySelector('.search-btn');
 searchBtn.addEventListener('click', function() {
   let city = cityEl.value.replace(/[^\D]/g, '');
   if (city != '') {
-    // callback to function goes here
+    displayWeather(city);
   }
 });
