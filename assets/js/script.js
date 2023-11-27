@@ -16,3 +16,12 @@ const API_URL = 'http://api.openweathermap.org/data/2.5/';
 // User input from search bar
 let cityEl = document.querySelector('.user-input');
 
+// some function to do stuff
+
+// Allow stuff to happen when searchBtn is clicked
+let searchBtn = document.querySelector('.search-btn');
+
+searchBtn.addEventListener('click', function() {
+  let city = cityEl.value.replace(/[^\D]/g, '');
+  
+});
