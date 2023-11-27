@@ -23,5 +23,7 @@ let searchBtn = document.querySelector('.search-btn');
 
 searchBtn.addEventListener('click', function() {
   let city = cityEl.value.replace(/[^\D]/g, '');
-  
+  if (city != '') {
+    // callback to function goes here
+  }
 });
