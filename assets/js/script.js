@@ -21,7 +21,12 @@ let cityEl = document.querySelector('.user-input');
 function displayWeather(city) {
   // Get coords from input
   const userReq = API_GEO_URL + city + '&limit=1' + '&appid=' + API_Key;
-  console.log(userReq);
+  
+  fetch(userReq)
+    .then((response) => response.json())
+    .then((cityInfo) => {
+      console.log(cityInfo);
+    })
 }
 
 // Allow stuff to happen when searchBtn is clicked
