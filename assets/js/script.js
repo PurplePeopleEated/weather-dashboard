@@ -17,7 +17,7 @@ const API_GEO_URL = 'http://api.openweathermap.org/geo/1.0/direct?q=';
 // User input from search bar
 let cityEl = document.querySelector('.user-input');
 
-// some function to do stuff
+// some function to do stuff .catch(err => console.err(err));
 function displayWeather(city) {
   // Get coords from input
   const userReq = API_GEO_URL + city + '&limit=1' + '&appid=' + API_Key;
@@ -28,8 +28,13 @@ function displayWeather(city) {
       let lon = cityInfo[0].lon;
       let lat = cityInfo[0].lat;
 
-      const forecastReq = API_URL + 'forecast?lat=' + lat + '&lon=' + lon + '&appid=' + API_Key;
-      console.log(forecastReq);
+      const forecastReq = API_URL + 'forecast?lat=' + lat + '&lon=' + lon + '&appid=' + API_Key + '&units=imperial';
+      
+      fetch(forecastReq)
+      .then((response) => response.json())
+      .then((forecastInfo) => {
+        console.log(forecastInfo);
+      })
     })
 }
 
