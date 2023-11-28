@@ -6,7 +6,7 @@ const API_GEO_URL = 'http://api.openweathermap.org/geo/1.0/direct?q=';
 let cityEl = document.querySelector('.user-input');
 let container = document.querySelector('.card-box');
 
-// some function to do stuff .catch(err => console.err(err));
+// some function to do stuff
 function displayWeather(city) {
   // Get coords from input
   const userReq = API_GEO_URL + city + '&limit=1' + '&appid=' + API_Key;
@@ -60,8 +60,8 @@ function displayWeather(city) {
           <h4>Humidity: ${humidity}</h4>`
           ; container.appendChild(day);
         }
-      })
-    })
+      }) .catch(err => console.err(err));
+    }) .catch(err => console.err(err));
 }
 
 function history(city) {
@@ -83,4 +83,13 @@ searchBtn.addEventListener('click', function() {
     history(city);
     displayWeather(city);
   }
+});
+
+let cityBtn = document.querySelectorAll('.btn');
+
+cityBtn.forEach((btn) => {
+  btn.addEventListener('click', function() {
+    let oldCity = sessionStorage.getItem(btn.innerHTML)
+    console.log(oldCity);
+  });
 });
