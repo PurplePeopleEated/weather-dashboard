@@ -41,20 +41,20 @@ function displayWeather(city) {
         let x = 0;
         while (i < 5) {
           i++;
-          console.log(i);
           x = x + 7;
-          console.log(x);
           // Grab info from api
           let date = new Date(info.list[x].dt * 1000).toLocaleDateString();
           let temp = info.list[x].main.temp + '°F';
           let wind = info.list[x].wind.speed + 'mph';
           let humidity = info.list[x].main.humidity + '%';
+          let icon = info.list[x].weather[0].icon;
+          let grabIcon = `http://openweathermap.org/img/w/${icon}.png`;
           // Create div for day
           let day = document.createElement('div');
           day.classList.add('card');
           day.innerHTML = `
           <h3>${date}</h3>
-          <i></i>
+          <img src = '${grabIcon}'>
           <h4>Temp: ${temp}</h4>
           <h4>Wind: ${wind}</h4>
           <h4>Humidity: ${humidity}</h4>`
