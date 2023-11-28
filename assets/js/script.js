@@ -51,10 +51,10 @@ function displayWeather(city) {
         // Display 5-day forecast
         let i = 0;
         let x = 0;
-        while (i < 4) {
+        while (i < 5) {
           i++;
           console.log(i);
-          x = x + 8;
+          x = x + 7;
           console.log(x);
           // Grab info from api
           let date = new Date(info.list[x].dt * 1000).toLocaleDateString();
