@@ -85,11 +85,11 @@ searchBtn.addEventListener('click', function() {
   }
 });
 
-let cityBtn = document.querySelectorAll('.btn');
+// let cityBtn = document.querySelectorAll('.btn');
 
-cityBtn.forEach((btn) => {
-  btn.addEventListener('click', function() {
-    let oldCity = sessionStorage.getItem(btn.innerHTML)
-    console.log(oldCity);
-  });
-});
+// cityBtn.forEach((btn) => {
+//   btn.addEventListener('click', function() {
+//     let oldCity = sessionStorage.getItem(btn.innerHTML)
+//     console.log(oldCity);
+//   });
+// });
