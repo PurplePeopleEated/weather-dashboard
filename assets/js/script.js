@@ -16,12 +16,13 @@ const API_GEO_URL = 'http://api.openweathermap.org/geo/1.0/direct?q=';
 
 // User input from search bar
 let cityEl = document.querySelector('.user-input');
+let container = document.querySelector('.card-box');
 
 // some function to do stuff .catch(err => console.err(err));
 function displayWeather(city) {
   // Get coords from input
   const userReq = API_GEO_URL + city + '&limit=1' + '&appid=' + API_Key;
-  
+  // Fetch data using userReq 
   fetch(userReq)
     .then((response) => response.json())
     .then((cityInfo) => {
@@ -29,12 +30,12 @@ function displayWeather(city) {
       let lat = cityInfo[0].lat;
 
       const forecastReq = API_URL + 'forecast?lat=' + lat + '&lon=' + lon + '&appid=' + API_Key + '&units=imperial';
-      
+      // Fetch data using the longitude and latitude of the user given city
       fetch(forecastReq)
       .then((response) => response.json())
       .then((info) => {
         console.log(info);
-
+        // Display current weather
         let city = document.getElementById('city-choice');
         let date = document.getElementById('date');
         let temp = document.getElementById('temp');
@@ -46,6 +47,31 @@ function displayWeather(city) {
         temp.innerHTML += ' ' + info.list[0].main.temp + '°F';
         wind.innerHTML += ' ' + info.list[0].wind.speed + 'mph';
         humidity.innerHTML += ' ' + info.list[0].main.humidity + '%';
+
+        // Display 5-day forecast
+        let i = 0;
+        let x = 0;
+        while (i < 4) {
+          i++;
+          console.log(i);
+          x = x + 8;
+          console.log(x);
+          // Grab info from api
+          let date = new Date(info.list[x].dt * 1000).toLocaleDateString();
+          let temp = info.list[x].main.temp + '°F';
+          let wind = info.list[x].wind.speed + 'mph';
+          let humidity = info.list[x].main.humidity + '%';
+          // Create div for day
+          let day = document.createElement('div');
+          day.classList.add('card');
+          day.innerHTML = `
+          <h3>${date}</h3>
+          <i></i>
+          <h4>Temp: ${temp}</h4>
+          <h4>Wind: ${wind}</h4>
+          <h4>Humidity: ${humidity}</h4>`
+          ; container.appendChild(day);
+        }
       })
     })
 }
