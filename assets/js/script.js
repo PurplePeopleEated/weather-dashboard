@@ -141,13 +141,13 @@ searchBtn.addEventListener('click', function() {
 // Modify the createSearchButton function to include a data attribute for the city
 function createSearchButton(city) {
   let searchArea = document.querySelector('.search-area');
-+  let btn = document.createElement('button');
-+  btn.setAttribute('data-city', city.toLowerCase()); // Set a data attribute to identify the city
-+  btn.classList.add('btn');
-+  btn.textContent = city;
-+  btn.addEventListener('click', function() {
-+    displayWeather(city);
-+  });
-+  searchArea.appendChild(btn);
-+  toggleClearButton();
-+}
+  let btn = document.createElement('button');
+  btn.setAttribute('data-city', city.toLowerCase()); // Set a data attribute to identify the city
+  btn.classList.add('btn');
+  btn.textContent = city;
+  btn.addEventListener('click', function() {
+    displayWeather(city);
+  });
+  searchArea.appendChild(btn);
+  toggleClearButton();
+}
