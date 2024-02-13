@@ -14,6 +14,8 @@ This site is for a user to look up a city and see the coming forcast!
 
 Type a city name into the search bar and click `Search`. The forecast will display below with images of the predictions. You can also click the button that is created after you search to re-search it.
 
+[Link to Website](https://purplepeopleeated.github.io/weather-dashboard/)
+
 ![screenshot of the website](assets/scrnshot.png)
 
 ## License
