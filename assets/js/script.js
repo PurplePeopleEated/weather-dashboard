@@ -85,11 +85,69 @@ searchBtn.addEventListener('click', function() {
   }
 });
 
-// let cityBtn = document.querySelectorAll('.btn');
+// Check if there are any searched cities and conditionally render the clear button
+function toggleClearButton() {
+  let searchArea = document.querySelector('.search-area');
+  let buttons = searchArea.querySelectorAll('.btn');
+  let clearButton = document.querySelector('.clear-btn');
+  
+  if (buttons.length > 0) {
+    if (!clearButton) {
+      // Create and append the clear button if it doesn't exist
+      clearButton = document.createElement('button');
+      clearButton.classList.add('clear-btn');
+      clearButton.textContent = 'Clear';
+      clearButton.addEventListener('click', clearSearchedCities);
+      searchArea.appendChild(clearButton);
+    }
+  } else if (clearButton) {
+    // Remove the clear button if no searched cities are present
+    searchArea.removeChild(clearButton);
+  }
+}
 
-// cityBtn.forEach((btn) => {
-//   btn.addEventListener('click', function() {
-//     let oldCity = sessionStorage.getItem(btn.innerHTML)
-//     console.log(oldCity);
-//   });
-// });
+// Call toggleClearButton function after manipulating search buttons
+toggleClearButton();
+
+// Clear searched cities from the search area
+function clearSearchedCities() {
+  let searchArea = document.querySelector('.search-area');
+  // Remove all child elements which are buttons with class 'btn'
+  let buttons = searchArea.querySelectorAll('.btn');
+  buttons.forEach(function(btn) {
+    searchArea.removeChild(btn);
+  });
+}
+
+// Add event listener to a clear button if it exists
+let clearBtn = document.querySelector('.clear-btn');
+if (clearBtn) {
+  clearBtn.addEventListener('click', clearSearchedCities);
+}
+
+// Refactor the searchBtn event listener to prevent creating multiple buttons for the same city
+searchBtn.addEventListener('click', function() {
+  let city = cityEl.value.trim().replace(/[^\w\s]/g, ''); // Also trim whitespace and remove non-alphanumeric characters
+  if (city !== '') {
+    // Check if a button for this city already exists
+    let existingBtn = document.querySelector(`.btn[data-city='${city.toLowerCase()}']`);
+    if (!existingBtn) {
+      createSearchButton(city);
+    }
+    displayWeather(city);
+  }
+});
+
+// Modify the createSearchButton function to include a data attribute for the city
+function createSearchButton(city) {
+  let searchArea = document.querySelector('.search-area');
++  let btn = document.createElement('button');
++  btn.setAttribute('data-city', city.toLowerCase()); // Set a data attribute to identify the city
++  btn.classList.add('btn');
++  btn.textContent = city;
++  btn.addEventListener('click', function() {
++    displayWeather(city);
++  });
++  searchArea.appendChild(btn);
++  toggleClearButton();
++}
