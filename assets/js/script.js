@@ -60,8 +60,8 @@ function displayWeather(city) {
           <h4>Humidity: ${humidity}</h4>`
           ; container.appendChild(day);
         }
-      }) .catch(err => console.err(err));
-    }) .catch(err => console.err(err));
+      }) .catch(err => console.error(err));
+    }) .catch(err => console.error(err));
 }
 
 function history(city) {
